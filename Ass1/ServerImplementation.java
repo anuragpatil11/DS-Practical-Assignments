@@ -1,8 +1,12 @@
 import java.rmi.*;
 import java.rmi.server.*;
 
+// This class implements the remote interface and extends UnicastRemoteObject 
+// to allow the object to receive remote method calls
 public class ServerImplementation extends UnicastRemoteObject implements ServerInterface {
-	public ServerImplementation() throws RemoteException {}
+
+    // Constructor must throw RemoteException
+    public ServerImplementation() throws RemoteException {}
 
 	public double Addition(double num1, double num2) throws RemoteException {
 		return num1 + num2;
