@@ -4,8 +4,12 @@ import java.util.Scanner;
 public class Client {
 	public static void main(String[] args) {
 		try {
+			// Define the URL where the remote object (Server) is registered
 			String serverUrl = "rmi://localhost/Server";
+
+			// Look up the remote object in the RMI registry and cast it to the server interface
 			ServerInterface serverInterface = (ServerInterface) Naming.lookup(serverUrl);
+
 			Scanner sc = new Scanner(System.in);
 			double num1;
 			double num2;
